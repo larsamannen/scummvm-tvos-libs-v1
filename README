@@ -1,0 +1,28 @@
+### Pre-built 3rd party libraries for ScummVM on Apple TV ###
+
+This project contains libraries built for the Apple TV and Apple TV Simulator.
+The target architecture for the Apple TV is arm64 while for the simulator arm64 and x86_64.
+
+It contains binaries for the following libraries:
+
+libFLAC
+libSDL2_net
+libcurl
+libffi
+libfluidsynth
+libfreetype (concatenated with libbz2)
+libglib-2.0 (concatenated with libintl)
+libjpeg
+libmad
+libogg
+libpng
+libvorbis
+libvorbisfile
+
+Note 1:
+Apple TV doesn't support forking of processes which means that libraries using forking are
+compiled with that feature off (libmad and curl)
+
+Note 2:
+The libjpeg-turbo library for the x86_64 simulator is built with SIMD off. That will affect
+performance but probably not noticeable.
